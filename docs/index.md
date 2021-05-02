@@ -364,7 +364,16 @@ Por último, para mover directorios y copiarlos, hemos hecho uso de un módulo a
 ### **Ejercicio - 4**
 ![imagen_ejer_4](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/master/img/pr9/ejercicio-4.png?raw=true)
 ## **Conclusiones**
+La realización de la práctica nos ha servido para introducirnos al concepto de programación orientada a eventos, ya que hasta el momento sólo habíamos visto
+programación estructurada y programación orientada a objetos, y en cuanto a los ejercicios, los que más han costado han sido el segundo y el tercero, aunque el primero de realizar una traza, realmente la hemos comentado con nuestras palabras, aunque aún resulta complicado de entender.
 
+Por último, no se menciona en esta práctica, pero se han preparado una serie de test, documentación, cubrimiento de código, así como workflows de GitHub.
 ## **Bibliografía**
+1.  Enunciado de la [Práctica 8](https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/) - Aplicación de procesamiento de notas de texto.
+2.  [Streams](https://nodejs.org/api/stream.html) o flujos en node.js.
+3.  ¿Cómo funcionan los [eventos](https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif)?
+4.  Creación de procesos con [spawn](https://nodejs.org/dist/latest/docs/api/child_process.html#child_process_child_process_spawn_command_args_options).
+5.  [API asíncrona](https://nodejs.org/dist/latest/docs/api/fs.html#fs_callback_api) del sistema de ficheros de Node.js.
+6.  [API asíncorna](https://nodejs.org/dist/latest/docs/api/child_process.html#child_process_asynchronous_process_creation) de la creación de procesos de Node.js.
 
 
