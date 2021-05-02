@@ -192,3 +192,178 @@ EventType es el tipo de evento, y filename es el nombre del archivo que estamos 
 método *toString()*, ya que los datos por defecto son de tipo *buffer*.
 
 ## **Ejercicio 4**
+En este ejercicio se plantean un serie de problemas relacionados con el sistema de ficheros, y en todos ellos debemos hacer uso de las funciones
+asíncronas del sistema de ficheros de la API de node.js.
+
+Estos son los ejercicios propuestos (la aplicación permite hacer de wrapper entre los distintos comandos empleados el Linux para el manejo de 
+ficheros y directorios):
+
+1.  Dada una ruta concreta, mostrar si es un directorio o un fichero.
+2.  Crear un nuevo directorio a partir de una nueva ruta que recibe como parámetro.
+3.  Listar los ficheros dentro de un directorio.
+4.  Mostrar el contenido de un fichero (similar a ejecutar el comando cat).
+5.  Borrar ficheros y directorios.
+6.  Mover y copiar ficheros y/o directorios de una ruta a otra. Para este caso, la aplicación recibirá una ruta origen y una ruta destino.
+
+Para interactuar con la aplicación a través de la líena de comandos podemos hacer uso del módulo *yargs*.
+
+Para la resolución del ejercicio, hemos creado una clase que se llama *file-handler*, que solo tiene un atributo,*pathRelative*, y es la ruta con la que el 
+usuario está trabajando en ese momento, luego tenemos un *getter()* y un *setter()* que retornan o modifican este atributo, puesto que es privado.
+
+Luego, disponemos del siguiente método, que ya hemos usado en ejercicios anteriores:
+
+```TypeScript
+  isRightPath() {
+    if (fs.existsSync(`${__dirname}/${this.pathRelative}`)) {
+      return true;
+    } else return false;
+  }
+```
+Lo hacemos así porque tenemos que controlar que realmente existan las rutas para los ficheros o los directorios.
+
+Para cada uno de los apartados anteriores, tenemos métodos que al final retornan verdadero o falso, para después poder hacer los tests.
+A continuación, mostramos las llamadas a las funciones asíncronas por cada uno de los ejercicios planteados:
+
+1.  Dada una ruta concreta, mostrar si es un directorio o un fichero:
+
+```TypeScript
+try {
+  fs.lstat(`${__dirname}/${this.pathRelative}`, (err, stats) => {
+    if (err) {
+      throw new Error(`Ha habido un problema con ${this.pathRelative}`);
+    } else {
+      if (stats.isFile()) {
+        console.log(`Es un fichero: ${stats.isFile()}`);
+      }
+      if (stats.isDirectory()) {
+        console.log(`Es un directorio: ${stats.isDirectory()}`);
+      }
+    }
+  });
+```
+La función lstat obtiene el estado de un archivo o un directorio, lo que nos sirve a la hora de averiguar el tipo, a través del parámetro
+stats, que tiene un serie de funciones, las que necesitamos son dos, *isFile()* y *isDirectory()*.
+
+2.  Crear un nuevo directorio a partir de una nueva ruta que recibe como parámetro:
+
+```TypeScript
+fs.mkdir(`${__dirname}/${this.pathRelative}`, {recursive: true}, (err) => {
+    if (err) {
+      throw new Error(`Ha habido un problema con ${this.pathRelative}`);
+    } else {
+      console.log(`El directorio ${this.pathRelative} se ha creado correctamente`);
+    }
+  });
+} catch (error) {
+```
+Es similar realmente a ejecutar un comando *mkdir*, en una terminal cualquiera de Linux, de hecho, la función a la API tiene el mismo nombre, 
+y recibe como parámetros el nombre del directorio, una serie de opciones, y un callback para manejar los posibles errores que puedan suceder, 
+ya que recordemos que ningúna función está exenta de errores.
+
+3.  Listar los ficheros dentro de un directorio.
+
+```TypeScript
+try {
+  fs.readdir(`${__dirname}/${this.pathRelative}`, (err, archivos) => {
+    if (err) {
+      throw new Error(`Ha habido un problema con ${this.pathRelative}`);
+    }
+    console.log(archivos);
+  });
+  } catch (error) {
+```
+Con la función readdir estamos leyendo los archivos que se encuentran en el interior de un directorio que le especificamos a la función, entonces
+lee de forma asíncrona el directorio, y en archivos, se encuentra la lista de ficheros que ha encontrado, es un vector de strings.
+
+4.  Mostrar el contenido de un fichero.
+
+```TypeScript
+try {
+  fs.readFile(`${__dirname}/${this.pathRelative}`, (err, data) => {
+    if (err) {
+      throw new Error(`Ha habido un problema con ${this.pathRelative}`);
+    } else {
+      console.log(data.toString());
+    }
+  });
+```
+En este caso hemos de mostrar por pantalla el contenido del fichero, sin embargo, esta implementación solo funciona cuando el tamaño del archivo
+no es muy grande, ya que en data se almacenan los datos, pero es de tipo buffer y se almacena en la memoria, y si el archivo es demasiado grande
+no lo va a poder leer, sin embargo, para está práctica nos sirve, ya que no estamos trabajando con archivos de gran tamaño.
+
+5.  Borrar ficheros y directorios
+
+```TypeScript
+try {
+  fs.rm(`${__dirname}/${this.pathRelative}`, {recursive: true, force: true}, (err) => {
+    if (err) {
+      throw new Error(`Ha habido un problema con ${this.pathRelative}`);
+    } else {
+      console.log(`Se ha borrado ${__dirname}/${this.pathRelative}`);
+    }
+  });
+```
+Esta es una de las operaciones más sensibles, puesto que estamos borrando archivos y directorios de forma asíncrona con la llamada a la función rm,
+sin embargo, al tratarse de directorios, hemos de usar las opciones *recursive* y *force* para que elimine el contenido dentro del directorio, sino
+nos va a dar un error, ya que solo permite borrar directorios vacíos.
+
+6.  Mover o copiar archivos y directorios.
+
+```TypeScript
+try {
+  if (opcion === 1) { // mueve el archivo, lo copia y despues lo elimina
+    fs.copyFile(`${__dirname}/${this.pathRelative}`, `${__dirname}/${path}`, (err) => {
+      if (err) {
+        throw new Error(`Ha habido un problema con ${this.pathRelative} o con ${__dirname}/${path}`);
+      }
+      console.log(`Se ha movido el archivo ${__dirname}/${this.pathRelative} a ${__dirname}/${path}`);
+    });
+    this.deleteFileDir();
+  }
+
+  if (opcion === 2) { // copia el archivo
+    fs.copyFile(`${__dirname}/${this.pathRelative}`, `${__dirname}/${path}`, (err) => {
+      if (err) {
+        throw new Error(`Ha habido un problema con ${__dirname}/${this.pathRelative} o con ${__dirname}/${path}`);
+      }
+      console.log(`Se ha copiado el archivo ${__dirname}/${this.pathRelative} a ${__dirname}/${path}`);
+    });
+  }
+
+  if (opcion === 3) { // mueve el directorio, lo copia y despues lo elimina
+    ncp(`${__dirname}/${this.pathRelative}`, `${__dirname}/${path}`, (err) => {
+      if (err) {
+        throw new Error(`Ha habido un problema con ${__dirname}/${this.pathRelative} o con ${__dirname}/${path}`);
+      }
+      console.log(`Se ha movido el directorio ${__dirname}/${this.pathRelative} a ${__dirname}/${path}`);
+    });
+    this.deleteFileDir();
+  }
+
+  if (opcion === 4) { // copia el directorio
+    ncp(`${__dirname}/${this.pathRelative}`, `${__dirname}/${path}`, (err) => {
+      if (err) {
+        throw new Error(`Ha habido un problema con ${this.pathRelative} o con ${__dirname}/${path}`);
+      }
+      console.log(`Se ha copiado el directorio ${__dirname}/${this.pathRelative} a ${__dirname}/${path}`);
+    });
+  }
+```
+En este caso manejamos varias opciones, y la función unicamente va a recibir un parámetro, porque el otro es implícito, es un atributo
+de la clase, una de las rutas, que es la que usamos como ruta origen, y la ruta destino es la que se le pasa a la función.
+Cabe destacar que para mover un archivo o mover un directorio, lo que hacemos es copiarlo primero y luego borrarlo de la ruta origen.
+
+Por último, para mover directorios y copiarlos, hemos hecho uso de un módulo adicional que sirve para copiar directorios, [ncp](https://www.npmjs.com/package/ncp).
+
+## **Ejemplos de uso de la aplicación**
+### **Ejercicio - 2**
+
+### **Ejercicio - 3**
+
+### **Ejercicio - 4**
+
+## **Conclusiones**
+
+## **Bibliografía**
+
+
