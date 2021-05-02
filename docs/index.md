@@ -357,11 +357,12 @@ Por último, para mover directorios y copiarlos, hemos hecho uso de un módulo a
 
 ## **Ejemplos de uso de la aplicación**
 ### **Ejercicio - 2**
-
+![imagen_ejer_2](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/master/img/pr9/ejercicio-2.png?raw=true)
 ### **Ejercicio - 3**
-
+![imagen_ejer_3.1](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/master/img/pr9/ejercicio-3.1.png?raw=true)
+![imagen_ejer_3.2](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/master/img/pr9/ejercicio-3.2.png?raw=true)
 ### **Ejercicio - 4**
-
+![imagen_ejer_4](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/master/img/pr9/ejercicio-4.png?raw=true)
 ## **Conclusiones**
 
 ## **Bibliografía**
