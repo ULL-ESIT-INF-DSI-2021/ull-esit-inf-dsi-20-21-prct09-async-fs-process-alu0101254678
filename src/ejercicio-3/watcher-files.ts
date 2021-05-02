@@ -3,6 +3,12 @@ import path from 'path';
 import {watch} from 'fs';
 import * as yargs from 'yargs';
 
+/**
+ * Este es el callback, lo que hace es imprimir si se han producido
+ * cambios en el directorio
+ * @param eventType el tipo de evento que puede ser rename o change
+ * @param filename el nombre del fichero, cuando se elimina del directorio, se añade...
+ */
 function callback(eventType: 'rename' | 'change', filename: Buffer) {
   if (filename) {
     console.log('El archivo', filename.toString(), 'se ha modificado!');
@@ -10,6 +16,11 @@ function callback(eventType: 'rename' | 'change', filename: Buffer) {
   }
 }
 
+/**
+ * Comando que sirve para observar si se producen cambios en el 
+ * directorio del usuario, donde se almacenan las notas, tiene dos opciones
+ * obligatorias, user y path
+ */
 yargs.command({
   command: 'watch',
   describe: 'Observa si ha cambiado un directorio',
@@ -33,6 +44,10 @@ yargs.command({
   },
 });
 
+/**
+ * Esta sentencia hace que se analicen los argumentos pasados a través de 
+ * la línea de comandos
+ */
 yargs.parse();
 
 /*

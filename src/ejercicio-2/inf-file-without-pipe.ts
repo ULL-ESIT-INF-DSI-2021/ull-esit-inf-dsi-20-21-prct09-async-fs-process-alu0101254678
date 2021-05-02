@@ -1,12 +1,27 @@
 import {spawn} from 'child_process';
 import * as fs from 'fs';
 
+/**
+ * Función que sirve para comprobar si la ruta a un archivo
+ * es válida o no
+ * @param path la ruta al archivo
+ * @returns verdadero o falso
+ */
 export function isRightPathParam(path: string) {
   if (fs.existsSync(`${__dirname}/${path}`)) {
     return true;
   } else return false;
 }
 
+/**
+ * Función counts, que cuenta el numero de líneas, palabras y carateres de un archivo que se pasa
+ * como parámetro, por defecto será el que se ve debajo si no especifica, y la opcion
+ * para decirle si queremos que nos de las lineas, las palabras o los caracteres, o todos, es asíncrona
+ * hace uso de los streams, y no de pipe
+ * @param file el archivo que se le pasa
+ * @param option la opcion, que es 1, 2, 3, o 4
+ * @returns la función pude devolver un error
+ */
 export function counts(file = '../../typedoc.json', option: number) {
   try {
     if (!isRightPathParam(file)) {

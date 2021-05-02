@@ -1,0 +1,471 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Notes | Sistema de Ficheros y Creación de Procesos en Node.js</title>
+	<meta name="description" content="Documentation for Sistema de Ficheros y Creación de Procesos en Node.js">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Sistema de Ficheros y Creación de Procesos en Node.js</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Sistema de Ficheros y Creación de Procesos en Node.js</a>
+				</li>
+				<li>
+					<a href="../modules/ejercicio_3_notes.html">ejercicio-3/notes</a>
+				</li>
+				<li>
+					<a href="ejercicio_3_notes.notes.html">Notes</a>
+				</li>
+			</ul>
+			<h1>Class Notes</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Clase Notes, que se encarga del sistema de ficheros, y de realizar
+						las operaciones con las notas de texto</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Notes</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ejercicio_3_notes.notes.html#user" class="tsd-kind-icon">user</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#addnote" class="tsd-kind-icon">add<wbr>Note</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#getuser" class="tsd-kind-icon">get<wbr>User</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#modnote" class="tsd-kind-icon">mod<wbr>Note</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#readnotes" class="tsd-kind-icon">read<wbr>Notes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#readtitle" class="tsd-kind-icon">read<wbr>Title</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_3_notes.notes.html#removenote" class="tsd-kind-icon">remove<wbr>Note</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Notes<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_3_notes.notes.html" class="tsd-signature-type" data-tsd-kind="Class">Notes</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L20">ejercicio-3/notes.ts:20</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>El constructor inicializa el atributo user</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>user: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="ejercicio_3_notes.notes.html" class="tsd-signature-type" data-tsd-kind="Class">Notes</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="user" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> user</h3>
+					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L20">ejercicio-3/notes.ts:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>El único atributo es &#39;user&#39;, y representa al
+							directorio del usuario</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addnote" class="tsd-anchor"></a>
+					<h3>add<wbr>Note</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Note<span class="tsd-signature-symbol">(</span>titleAux<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, bodyAux<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, colorAux<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L47">ejercicio-3/notes.ts:47</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para añadir una nota, tiene
+										como parámetros el título(string), el cuerpo(string) y
+										el color(string), tiene que comprobar si la nota ya
+									existe para poder añadirla</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>titleAux: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>bodyAux: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>colorAux: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getuser" class="tsd-anchor"></a>
+					<h3>get<wbr>User</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L34">ejercicio-3/notes.ts:34</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Getter del atributo user</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>El atributo user</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="modnote" class="tsd-anchor"></a>
+					<h3>mod<wbr>Note</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">mod<wbr>Note<span class="tsd-signature-symbol">(</span>tituloAux<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cuerpoAux<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, colorAux<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L90">ejercicio-3/notes.ts:90</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para modificar una nota, las partes que se modifican
+										de la nota son el cuerpo y el color, (este último opcionalmente), el procedimiento
+										que se sigue es que se elimina una nota, y se vuelve a crear la misma nota
+									pero con el cuerpo y el color cambiados</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tituloAux: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>el titulo que se va a aplicar</p>
+									</div>
+								</li>
+								<li>
+									<h5>cuerpoAux: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>el cuerpo que se va a aplicar</p>
+									</div>
+								</li>
+								<li>
+									<h5>colorAux: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;blue&#x27;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>el color que se va a aplicar</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Una cadena de datos con los parámetros modificados o un mensaje de error</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readnotes" class="tsd-anchor"></a>
+					<h3>read<wbr>Notes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Notes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L204">ejercicio-3/notes.ts:204</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para listar el conjunto
+									de notas del usuario</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readtitle" class="tsd-anchor"></a>
+					<h3>read<wbr>Title</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Title<span class="tsd-signature-symbol">(</span>tituloListar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L131">ejercicio-3/notes.ts:131</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para leer una nota que el usuario
+										introduce a través de su título, tiene como parámetro
+									el título de la nota a listar(string)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tituloListar: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removenote" class="tsd-anchor"></a>
+					<h3>remove<wbr>Note</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Note<span class="tsd-signature-symbol">(</span>tituloEliminar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-3/notes.ts#L169">ejercicio-3/notes.ts:169</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para eliminar una nota, en función
+										de un título de la propia nota que se desea eliminar,es
+									necesario comprobar si esa nota existe</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tituloEliminar: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/access.html">access</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_index_inf_file_with_pipe.html">ejercicio-<wbr>2/index-<wbr>inf-<wbr>file-<wbr>with-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_index_inf_file_without_pipe.html">ejercicio-<wbr>2/index-<wbr>inf-<wbr>file-<wbr>without-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_inf_file_with_pipe.html">ejercicio-<wbr>2/inf-<wbr>file-<wbr>with-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_inf_file_without_pipe.html">ejercicio-<wbr>2/inf-<wbr>file-<wbr>without-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_3_index_notes.html">ejercicio-<wbr>3/index-<wbr>notes</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/ejercicio_3_notes.html">ejercicio-<wbr>3/notes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_3_watcher_files.html">ejercicio-<wbr>3/watcher-<wbr>files</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_4_file_handler.html">ejercicio-<wbr>4/file-<wbr>handler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_4_index_file_handler.html">ejercicio-<wbr>4/index-<wbr>file-<wbr>handler</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="ejercicio_3_notes.notes.html" class="tsd-kind-icon">Notes</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="ejercicio_3_notes.notes.html#user" class="tsd-kind-icon">user</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#addnote" class="tsd-kind-icon">add<wbr>Note</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#getuser" class="tsd-kind-icon">get<wbr>User</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#modnote" class="tsd-kind-icon">mod<wbr>Note</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#readnotes" class="tsd-kind-icon">read<wbr>Notes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#readtitle" class="tsd-kind-icon">read<wbr>Title</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_3_notes.notes.html#removenote" class="tsd-kind-icon">remove<wbr>Note</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

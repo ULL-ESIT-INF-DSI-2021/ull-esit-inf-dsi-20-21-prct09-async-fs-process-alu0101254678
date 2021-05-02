@@ -1,33 +1,65 @@
-import * as fs from 'fs';
-import ncp from 'ncp';
-
+import * as fs from 'fs'; // módulo de Node.js para trabajar con el sistema de ficheros
+import ncp from 'ncp'; // módulo para copiar directorios
+/**
+ * Clase FileHandler, que sirve para trabajar con el sistema
+ * de ficheros, de forma asíncrona, a través de los callbacks proporcionados
+ * por Node.js para trabajar con el sistema de ficheros
+ */
 export class FileHandler {
   private pathRelative: string;
   
+  /**
+   * La clase solo tiene un atributo, que representa la ruta
+   * relativa, es una cadena de caracteres
+   * @param pathParam se inicializa
+   */
   constructor(pathParam: string) {
     this.pathRelative = pathParam;
   }
 
+  /**
+   * Getter del atributo pathRelative
+   * @returns el propio atributo
+   */
   getPath() {
     return this.pathRelative;
   }
 
+  /**
+   * Setter del atributo path relative
+   * @param pathParam una ruta para cambiarle a pathRelative
+   */
   setPath(pathParam: string) {
     this.pathRelative = pathParam;
   }
 
+  /**
+   * Método que comprueba si el atributo pathRelative es correcto o no
+   * @returns verdadero o falso
+   */
   isRightPath() {
     if (fs.existsSync(`${__dirname}/${this.pathRelative}`)) {
       return true;
     } else return false;
   }
 
+  /**
+   * Método que comprueba si un argumento pasado al método es una ruta
+   * correcta o no
+   * @param path la ruta que se quiere saber si es correcta o no
+   * @returns verdadero o falso
+   */
   isRightPathParam(path: string) {
     if (fs.existsSync(`${__dirname}/${path}`)) {
       return true;
     } else return false;
   }
 
+  /**
+   * Método que comprueba si se trata de un archivo o directorio, del atributo
+   * pathRelative, que puede ser un archivo o un directorio, haciendo uso de lstat()
+   * @returns verdadero o falso, o un error
+   */
   isFileDir() {
     if (!this.isRightPath()) {
       return false;
@@ -53,6 +85,11 @@ export class FileHandler {
     }
   }
 
+  /**
+   * Método que sirve para crear un directorio, en este caso se tiene que hace
+   * de forma recursiva
+   * @returns verdadero, o un error
+   */
   createDir() {
     try {
       fs.mkdir(`${__dirname}/${this.pathRelative}`, {recursive: true}, (err) => {
@@ -69,6 +106,11 @@ export class FileHandler {
     return true;
   }
 
+  /**
+   * Método que sirve para la lectura de un directorio, haciendo uso de la llama a la
+   * función readdi() de node.js
+   * @returns verdadero o falso, o un error
+   */
   readDir() {
     if (!this.isRightPath()) {
       return false;
@@ -88,6 +130,12 @@ export class FileHandler {
     }
   }
 
+  /**
+   * Método que sirve para leer el contenido de un archivo, pero no sirve
+   * cuando son archivos muy grandes, puesto que se almacena en la memoria, en un
+   * buffer y puede ser que se llene, no se está tomando la información a trozos
+   * @returns verdadero,falso, o un erro
+   */
   readFile() {
     if (!this.isFileDir()) {
       return false;
@@ -108,6 +156,12 @@ export class FileHandler {
     }
   }
 
+  /**
+   * Método que sirve para eliminar un directorio o un archivo, si se trata de un directorio, elimina
+   * todo su contenido, no importa que no esté vacío, hace uso de la función rm() de nodejs del manejo de
+   * ficheros
+   * @returns verdadero o falso, o un error
+   */
   deleteFileDir() {
     if (!this.isRightPath()) {
       return false;
@@ -128,6 +182,17 @@ export class FileHandler {
     }
   }
 
+  /**
+   * Método que sirve para mover o copiar archivos o directorios entre rutas diferentes
+   * la ruta origen ya está especificada, y es el atributo en sí, para la copia de directorios
+   * se utiliza un paquete que se llama ncp que lo que hace es copiar directorios, por lo tanto
+   * realizamos una llamada a esa función, en el caso de que la opción sea 3 o 4, la opción solamente
+   * sirve para especificar que operación queremos realizar
+   * @param path la ruta destino
+   * @param opcion la opción, es un número
+   * @returns devuelve verdadero, pero eso no quiere decir que lo devuelva al final, ya que estamos trabajando 
+   * de forma asíncrona
+   */
   moveCopyFileDir(path: string, opcion: number) {
     if (!this.isRightPath() || !this.isRightPathParam(path)) {
       return false;
@@ -178,17 +243,3 @@ export class FileHandler {
     }
   }
 }
-
-/*
-import {copyFile, constants} from 'fs';
-
-function callback(err) {
-  return 'hola';
-}
-
-// destination.txt will be created or overwritten by default.
-copyFile('source.txt', 'destination.txt', callback);
-
-// By using COPYFILE_EXCL, the operation will fail if destination.txt exists.
-copyFile('source.txt', 'destination.txt', constants.COPYFILE_EXCL, callback);
-*/

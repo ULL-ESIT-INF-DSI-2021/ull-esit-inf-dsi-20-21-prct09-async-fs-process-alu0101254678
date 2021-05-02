@@ -1,12 +1,28 @@
 import {spawn} from 'child_process';
 import * as fs from 'fs';
 
+/**
+ * Función que sirve para comprobar si la ruta a un archivo
+ * es válida o no
+ * @param path la ruta al archivo
+ * @returns verdadero o falso
+ */
 export function isRightPathParam(path: string) {
   if (fs.existsSync(`${__dirname}/${path}`)) {
     return true;
   } else return false;
 }
 
+/**
+ * Función Counts(), que se sirve para mostrar información estadística (núemero de líenas
+ * palabras, caracteres, o manos) de un fichero, en este caso, de un fichero que se 
+ * le pasa como parámetro, y una opción que representa la operación que se desea hacer, lo que hace
+ * es redirgir, cuando se ejecuta la función la salida de un comando, creando un proceso hijo, a la
+ * salida estándar del programa
+ * @param file 
+ * @param opcion 
+ * @returns 
+ */
 export function counts(file: string, opcion: number) {
   try {
     if (!isRightPathParam(file)) {

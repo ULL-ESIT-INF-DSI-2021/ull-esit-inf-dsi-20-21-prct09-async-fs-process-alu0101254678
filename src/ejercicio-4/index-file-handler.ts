@@ -1,6 +1,11 @@
 import {FileHandler} from './file-handler';
 import * as yargs from 'yargs'; 
 
+/**
+ * Comando que sirve para analizar si una ruta dad
+ * es un fichero o un directorio, tiene una opción
+ * que es la ruta
+ */
 yargs.command({
   command: 'isfiledir',
   describe: 'Comprueba si es un directorio o un fichero',
@@ -23,6 +28,10 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que sirve para crear un directorio, para comunicarselo
+ * a file.handler, siempre se crear un objeto de este tipo
+ */
 yargs.command({
   command: 'createdir',
   describe: 'Crea un directorio',
@@ -41,6 +50,11 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que sirve para leer un directorio,
+ * con una opción obligatoria que es la ruta al
+ * directorio
+ */
 yargs.command({
   command: 'readdir',
   describe: 'Lee un directorio',
@@ -63,6 +77,11 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que sirve para leer el contenido de un fichero
+ * tiene una única opción que es path, es un string, y es obligatoria
+ * la opcion, luego tiene un handler que es para manejar la lógica
+ */
 yargs.command({
   command: 'readfile',
   describe: 'Lee un archivo',
@@ -85,6 +104,10 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que sirve para borrar un archivo o un directorio, comprueba en el
+ * manejador si es una ruta correcta o no
+ */
 yargs.command({
   command: 'deletefiledir',
   describe: 'Elimina un archivo o un directorio',
@@ -107,6 +130,13 @@ yargs.command({
   },
 });
 
+
+/**
+ * Comando que sirve para copiar o mover archivos o directorios, tiene tres opciones,
+ * una para la ruta origen, otra para la ruta destino, y la opción ya que puede darse
+ * el caso de que el usuario solo quiera mover un archivo, o un directorio, o copiar uno
+ * o el otro
+ */
 yargs.command({
   command: 'movecopyfiledir',
   describe: 'Mueve o copia un archivo o un directorio',
@@ -139,5 +169,9 @@ yargs.command({
   },
 });
 
+/**
+ * Esta sentencia hace que se analicen los comandos qur recibe el programa
+ * a través de la línea de comandos
+ */
 yargs.parse();
 

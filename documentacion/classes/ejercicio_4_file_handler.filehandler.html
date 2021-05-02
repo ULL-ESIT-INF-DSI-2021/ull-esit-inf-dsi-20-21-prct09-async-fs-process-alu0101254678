@@ -1,0 +1,563 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FileHandler | Sistema de Ficheros y Creación de Procesos en Node.js</title>
+	<meta name="description" content="Documentation for Sistema de Ficheros y Creación de Procesos en Node.js">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Sistema de Ficheros y Creación de Procesos en Node.js</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Sistema de Ficheros y Creación de Procesos en Node.js</a>
+				</li>
+				<li>
+					<a href="../modules/ejercicio_4_file_handler.html">ejercicio-4/file-handler</a>
+				</li>
+				<li>
+					<a href="ejercicio_4_file_handler.filehandler.html">FileHandler</a>
+				</li>
+			</ul>
+			<h1>Class FileHandler</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Clase FileHandler, que sirve para trabajar con el sistema
+							de ficheros, de forma asíncrona, a través de los callbacks proporcionados
+						por Node.js para trabajar con el sistema de ficheros</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">FileHandler</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ejercicio_4_file_handler.filehandler.html#pathrelative" class="tsd-kind-icon">path<wbr>Relative</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#createdir" class="tsd-kind-icon">create<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#deletefiledir" class="tsd-kind-icon">delete<wbr>File<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#getpath" class="tsd-kind-icon">get<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#isfiledir" class="tsd-kind-icon">is<wbr>File<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#isrightpath" class="tsd-kind-icon">is<wbr>Right<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#isrightpathparam" class="tsd-kind-icon">is<wbr>Right<wbr>Path<wbr>Param</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#movecopyfiledir" class="tsd-kind-icon">move<wbr>Copy<wbr>File<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#readdir" class="tsd-kind-icon">read<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#readfile" class="tsd-kind-icon">read<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_4_file_handler.filehandler.html#setpath" class="tsd-kind-icon">set<wbr>Path</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>File<wbr>Handler<span class="tsd-signature-symbol">(</span>pathParam<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_4_file_handler.filehandler.html" class="tsd-signature-type" data-tsd-kind="Class">FileHandler</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L9">ejercicio-4/file-handler.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>La clase solo tiene un atributo, que representa la ruta
+									relativa, es una cadena de caracteres</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathParam: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>se inicializa</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="ejercicio_4_file_handler.filehandler.html" class="tsd-signature-type" data-tsd-kind="Class">FileHandler</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="pathrelative" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> path<wbr>Relative</h3>
+					<div class="tsd-signature tsd-kind-icon">path<wbr>Relative<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L9">ejercicio-4/file-handler.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createdir" class="tsd-anchor"></a>
+					<h3>create<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L93">ejercicio-4/file-handler.ts:93</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para crear un directorio, en este caso se tiene que hace
+									de forma recursiva</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>verdadero, o un error</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletefiledir" class="tsd-anchor"></a>
+					<h3>delete<wbr>File<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>File<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L165">ejercicio-4/file-handler.ts:165</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para eliminar un directorio o un archivo, si se trata de un directorio, elimina
+										todo su contenido, no importa que no esté vacío, hace uso de la función rm() de nodejs del manejo de
+									ficheros</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>verdadero o falso, o un error</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpath" class="tsd-anchor"></a>
+					<h3>get<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Path<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L24">ejercicio-4/file-handler.ts:24</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Getter del atributo pathRelative</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>el propio atributo</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isfiledir" class="tsd-anchor"></a>
+					<h3>is<wbr>File<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>File<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L63">ejercicio-4/file-handler.ts:63</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que comprueba si se trata de un archivo o directorio, del atributo
+									pathRelative, que puede ser un archivo o un directorio, haciendo uso de lstat()</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>verdadero o falso, o un error</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isrightpath" class="tsd-anchor"></a>
+					<h3>is<wbr>Right<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Right<wbr>Path<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L40">ejercicio-4/file-handler.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que comprueba si el atributo pathRelative es correcto o no</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>verdadero o falso</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isrightpathparam" class="tsd-anchor"></a>
+					<h3>is<wbr>Right<wbr>Path<wbr>Param</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Right<wbr>Path<wbr>Param<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L52">ejercicio-4/file-handler.ts:52</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que comprueba si un argumento pasado al método es una ruta
+									correcta o no</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>la ruta que se quiere saber si es correcta o no</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>verdadero o falso</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="movecopyfiledir" class="tsd-anchor"></a>
+					<h3>move<wbr>Copy<wbr>File<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">move<wbr>Copy<wbr>File<wbr>Dir<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, opcion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L196">ejercicio-4/file-handler.ts:196</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para mover o copiar archivos o directorios entre rutas diferentes
+										la ruta origen ya está especificada, y es el atributo en sí, para la copia de directorios
+										se utiliza un paquete que se llama ncp que lo que hace es copiar directorios, por lo tanto
+										realizamos una llamada a esa función, en el caso de que la opción sea 3 o 4, la opción solamente
+									sirve para especificar que operación queremos realizar</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>la ruta destino</p>
+									</div>
+								</li>
+								<li>
+									<h5>opcion: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>la opción, es un número</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>devuelve verdadero, pero eso no quiere decir que lo devuelva al final, ya que estamos trabajando
+							de forma asíncrona</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readdir" class="tsd-anchor"></a>
+					<h3>read<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L114">ejercicio-4/file-handler.ts:114</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para la lectura de un directorio, haciendo uso de la llama a la
+									función readdi() de node.js</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>verdadero o falso, o un error</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readfile" class="tsd-anchor"></a>
+					<h3>read<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>File<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L139">ejercicio-4/file-handler.ts:139</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Método que sirve para leer el contenido de un archivo, pero no sirve
+										cuando son archivos muy grandes, puesto que se almacena en la memoria, en un
+									buffer y puede ser que se llene, no se está tomando la información a trozos</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>verdadero,falso, o un erro</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setpath" class="tsd-anchor"></a>
+					<h3>set<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Path<span class="tsd-signature-symbol">(</span>pathParam<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-alu0101254678/blob/bc7958a/src/ejercicio-4/file-handler.ts#L32">ejercicio-4/file-handler.ts:32</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Setter del atributo path relative</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathParam: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>una ruta para cambiarle a pathRelative</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/access.html">access</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_index_inf_file_with_pipe.html">ejercicio-<wbr>2/index-<wbr>inf-<wbr>file-<wbr>with-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_index_inf_file_without_pipe.html">ejercicio-<wbr>2/index-<wbr>inf-<wbr>file-<wbr>without-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_inf_file_with_pipe.html">ejercicio-<wbr>2/inf-<wbr>file-<wbr>with-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_2_inf_file_without_pipe.html">ejercicio-<wbr>2/inf-<wbr>file-<wbr>without-<wbr>pipe</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_3_index_notes.html">ejercicio-<wbr>3/index-<wbr>notes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_3_notes.html">ejercicio-<wbr>3/notes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_3_watcher_files.html">ejercicio-<wbr>3/watcher-<wbr>files</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/ejercicio_4_file_handler.html">ejercicio-<wbr>4/file-<wbr>handler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/ejercicio_4_index_file_handler.html">ejercicio-<wbr>4/index-<wbr>file-<wbr>handler</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="ejercicio_4_file_handler.filehandler.html" class="tsd-kind-icon">File<wbr>Handler</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="ejercicio_4_file_handler.filehandler.html#pathrelative" class="tsd-kind-icon">path<wbr>Relative</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#createdir" class="tsd-kind-icon">create<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#deletefiledir" class="tsd-kind-icon">delete<wbr>File<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#getpath" class="tsd-kind-icon">get<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#isfiledir" class="tsd-kind-icon">is<wbr>File<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#isrightpath" class="tsd-kind-icon">is<wbr>Right<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#isrightpathparam" class="tsd-kind-icon">is<wbr>Right<wbr>Path<wbr>Param</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#movecopyfiledir" class="tsd-kind-icon">move<wbr>Copy<wbr>File<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#readdir" class="tsd-kind-icon">read<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#readfile" class="tsd-kind-icon">read<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ejercicio_4_file_handler.filehandler.html#setpath" class="tsd-kind-icon">set<wbr>Path</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
