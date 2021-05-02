@@ -38,14 +38,14 @@ describe('Tests de la clase Manejador de archivos', () => {
     expect(objetoFile2.isFileDir()).to.be.equal(true);
   });
 
-  it('Se elimina un directorio correctamente', () => {
-    objetoFile1.setPath(`../../users/diego`);
-    expect(objetoFile1.deleteFileDir()).to.be.equal(true);
+  it('Se crea un directorio correctamente', () => {
+    objetoFile1.setPath(`../../users/diego/`);
+    expect(objetoFile1.createDir()).to.be.equal(true);
   });
 
-  it('Se crea un directorio correctamente', () => {
-    objetoFile1.setPath(`../../users/diego`);
-    expect(objetoFile1.createDir()).to.be.equal(true);
+  it('Se elimina un directorio correctamente', () => {
+    objetoFile1.setPath(`../../users/diego/`);
+    expect(objetoFile1.deleteFileDir()).to.be.equal(true);
   });
 
   it('Se lee un directorio correctamente', () => {
